@@ -163,7 +163,6 @@ RUN set -ex; \
 
 CMD ["python3"]
 
-
 # add yaml, ansible python ara docker-py module and SSH package.
 RUN set -xe \
     && apk add --no-cache --purge -u sudo curl ca-certificates openssh-client openssl \
