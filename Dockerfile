@@ -2,7 +2,7 @@ FROM python:3-alpine
 
 # add yaml, ansible python module and SSH package.
 RUN set -xe \
-    && apk add --no-cache --purge -u sudo curl ca-certificates openssh-client openssl \
+    && apk add --no-cache --purge -u sudo curl ca-certificates openssh-client openssl git \
     && apk --update add --virtual .build-dependencies python-dev libffi-dev openssl-dev build-base \
     && pip install --no-cache --upgrade pyyaml ansible ara docker-py \
     && apk del --purge .build-dependencies \
